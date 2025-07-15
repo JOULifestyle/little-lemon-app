@@ -1,38 +1,590 @@
-.App {
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.5rem 0;
+}
+
+p {
+  margin: 0.5rem 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #f4ce14;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e5bc0e;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.logo {
+  padding-left: 9rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+margin-right: -40px;
+}
+
+nav li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  color: #e5bc0e;
+}
+
+/* Layout Containers */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+main > section {
+  width: 100%;
+  max-width: 1215px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Hero Section */
+section[aria-label="Hero Section"] {
+  background-color: #495657;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  max-height: 350px;
+  margin-bottom: 50px;
+  max-width: 1215px;
+}
+
+.hero-left {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 150px;
+  margin-top: -200px;
+}
+
+.hero-left h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #f4ce14;
+}
+
+.hero-left h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-top: -20px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  max-width: 30ch;
+  margin-top: 0.5rem;
+}
+
+.hero-left button {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  border-radius: 30px;
+  max-height: 474px;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Highlights Section */
+section[aria-label="Weekly Specials"] {
+  background-color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.highlights-header {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.highlights-buttons {
+  text-align: right;
+  margin-right: 200px;
+margin-top: -70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.highlights {
+  display: flex;
+  justify-content: left;
+  gap: 1.5rem;
+  margin-top: 5rem;
+  overflow-x: auto;
+   padding: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 150px;
+  margin-right: 180px;
+}
+
+.highlights article {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 30px;
+  width: 230px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto; /* Prevent shrinking or wrapping */
+   scroll-snap-align: start;
+}
+
+.highlights {
+  scrollbar-width: none;        /* Firefox */
+}
+
+.highlights::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+.highlights-wrapper {
+   overflow-x: auto;
+  padding-left: 1rem; /* space to fully show first card */
+  padding-right: 1rem; /* space to make the last card only partially visible */
+  scroll-padding-left: 1rem; /* ensures first card is fully visible */
+}
+
+.highlights article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.highlights article h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.highlights article p {
+   font-family: 'Karla', sans-serif;
+  font-weight: 400;      /* Regular */
+  font-size: 1rem;       /* 16px */
+  line-height: 1.5;      /* Optional for readability */
+  color: #333;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  flex-grow: 1; /* pushes the button to bottom */
+}
+
+.order-link {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.2rem; /* 16px */
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;       /* spacing between text and icon */
+  padding: 0;        /* no padding */
+  transition: color 0.3s ease;
+}
+
+.order-link:hover {
+  color: #f4ce14;     /* yellow hover effect */
+}
+
+.delivery-icon {
+  font-size: 1.5rem;  /* makes icon larger (24px) */
+}
+
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dish-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dish-header .price {
+  color: #EE9972; /* or any color */
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 1225px;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  text-align: left;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 230px;
+}
+
+.testimonial .rating {
+  font-size: 1rem;
+  color: #f4ce14; /* yellow stars */
+  margin-bottom: 0.5rem;
+}
+
+.testimonial .user-info {
+  display: flex;
   align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.testimonial .user-info img {
+  width: 82px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial .user-info h4 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.testimonial p {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #333;
+}
+
+
+/* About Section */
+section[aria-label="About Section"] {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  min-height: 400px;
+   gap: 2rem;
+    padding: 2rem 1rem;
+     max-width: 1200px;
+      margin: 0 auto;
+}
+
+.about-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 170px;
+  margin-top: -200px;
+}
+
+.about-text h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #f4ce14;
+}
+
+.about-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-top: -20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  max-width: 30ch;
+  margin-top: 1.5rem;
+}
+
+.about-images {
+  flex: 1;
+  position: relative;
+  height: 320px;  /* restrict container height */
+  min-width: 300px;
+}
+
+.about-img {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.img-back {
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  width: 293px;
+  height: 306px;
+  margin-right: 20px; /* space between images */
+  transform: translateX(250px); /* shift left to overlap */
+  margin-top: -50px; /* adjust vertical position */
+  border-radius: 30px;
+}
+
+.img-front {
+  top: 0;
+  left: 40px;
+  z-index: 2;
+  width: 293px;
+  height: 306px;
+  transform: translateX(50px); /* shift right to overlap */
+  margin-top: -200px; /* adjust vertical position */
+  border-radius: 30px;
+}
+/* Footer */
+footer {
+  width: 1265px;
+  background-color: #495657;
   color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+
+footer section {
+  flex: 1 1 150px; /* allow shrink and grow */
+  min-width: 150px;
+    max-width: none;
+  margin: 0;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+   color: #f4ce14;;
+}
+
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  header, nav, footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  section[aria-label="Hero Section"] {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .hero-right img {
+    width: 90%;
+    margin: 1.5rem auto 0;
+  }
+
+  @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem; 
+  }
+
+  .nav-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 0.75rem 0;
+    width: 100%;
   }
 }
+
+
+  }
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-images {
+    margin-top: 1rem;
+  }
+
+  .about-images .img-front {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    width: 100vw;
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer section {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+
