@@ -42,7 +42,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .logo {
   padding-left: 9rem;
@@ -63,7 +71,7 @@ nav {
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-margin-right: -40px;
+margin-right: 230px;
 }
 
 nav li a {
@@ -81,6 +89,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  padding-top: 80px;
 }
 
 main > section {
@@ -437,7 +446,7 @@ footer {
   width: 1265px;
   background-color: #495657;
   color: white;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -477,6 +486,185 @@ footer a:hover {
    color: #f4ce14;;
 }
 
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  color: white;
+}
+
+
+/* Booking Page Styles */
+.booking-section {
+  background-image: url('/public/restaurant.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 1265px;
+  padding-top: 100px;
+}
+
+.booking-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* darkens the image */
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.booking-content {
+  display: flex;
+  gap: 3rem;
+  max-width: 1100px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.booking-text {
+  flex: 1;
+  padding: 1rem;
+  margin-top: 200px;
+}
+
+.booking-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f4ce14;
+}
+
+.booking-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.booking-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 30px;
+  max-width: 600px;
+  width: 100%;
+  color: #008000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-form label {
+  font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+   width: 100%;
+  box-sizing: border-box;
+  background-color: #EDEFEE;
+  color: #008000
+}
+
+.booking-form button {
+  background-color: #f4ce14;
+  color: #000;
+  padding: 0.75rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: #e5bc0e;
+}
+
+label[for="note"] {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+textarea#note {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical; /* allows vertical resizing only */
+  min-height: 100px;
+  font-family: 'Arial', sans-serif;
+  color: #008000;
+  background-color: #EDEFEE;
+}
+
+
+/* 🎯 Mobile Only Styles */
+@media (max-width: 768px) {
+  .booking-section {
+    background: none; /* Avoid double backgrounds */
+  }
+
+  .booking-content {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .booking-text {
+    width: 100%;
+    background-color: white;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+    box-shadow: none;
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  .booking-text::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .booking-text h2,
+  .booking-text p {
+    position: relative;
+    z-index: 2;
+  }
+
+  .booking-form {
+    background-color: white;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
 
 /* Responsive Rules */
 @media (max-width: 768px) {

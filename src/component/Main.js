@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Main() {
     return <main>
             {/* Hero Section */}
@@ -6,7 +8,9 @@ function Main() {
       <h1>Little Lemon</h1>
       <h2>Chicago</h2>
       <p>We are family owned Mediterranean restaurant, focused on traditional recipes, served with a modern twist.</p>
-      <button>Reserve a Table</button>
+      <Link to="/booking">
+  <button>Reserve a Table</button>
+</Link>
     </div>
      <div className="hero-right">
       <img src="restauranfood.jpg" alt="Chef holding Mediterranean food" />
@@ -22,7 +26,7 @@ function Main() {
       <button>Online Menu</button>
       </div>
         <div className="highlights-wrapper">
-      <div class="highlights">
+      <div className="highlights">
         <article>
           <img src="greek salad.jpg" alt="Greek Salad" />
           <div className="dish-header">
@@ -30,9 +34,9 @@ function Main() {
   <span className="price">$12.99</span>
 </div>
           <p>The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-         <a href="#" class="order-link">
+         <a href="#" className="order-link">
   Order a delivery
-  <span class="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
+  <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
 
         </article>
@@ -43,9 +47,9 @@ function Main() {
   <span className="price">$10.99</span>
 </div>
           <p>Our Bruschetta is made from grilled bread, rubbed with garlic, then seasoned with salt and olive oil—simple, flavorful, and perfect as a light appetizer.</p>
-          <a href="#" class="order-link">
+          <a href="#" className="order-link">
   Order a delivery
-  <span class="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
+  <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
         </article>
         <article>
@@ -55,9 +59,9 @@ function Main() {
   <span className="price">$8.99</span>
 </div>
           <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-         <a href="#" class="order-link">
+         <a href="#" className="order-link">
   Order a delivery
-  <span class="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
+  <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
         </article>
         <article>
@@ -67,9 +71,9 @@ function Main() {
   <span className="price">$12.99</span>
 </div>
           <p>The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-          <a href="#" class="order-link">
+          <a href="#" className="order-link">
   Order a delivery
-  <span class="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
+  <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
         </article>
       </div>
