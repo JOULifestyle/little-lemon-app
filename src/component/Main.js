@@ -1,6 +1,44 @@
 import { Link } from 'react-router-dom';
+import { useReducer } from 'react';
+import BookingForm from './BookingForm';
+import { fetchAPI, submitAPI } from '../api';
+
+
+
+// 1. Initialize available times using the API
+
+export const initializeTimes = () => {
+  const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+  return getFilteredTimes(today);
+};
+
+
+// 2. Reducer to update times based on selected date
+
+export const updateTimes = (state, action) => {
+  if (action.type === 'update') {
+    return getFilteredTimes(action.date);
+  }
+  return state;
+};
+
+// 🔁 Helper function
+function getFilteredTimes(dateString) {
+  const dateObj = new Date(dateString); // 👈 Convert string to Date object
+  const allTimes = fetchAPI(dateObj); // now fetchAPI gets a real Date
+
+  const reservations = JSON.parse(localStorage.getItem("reservations") || "[]");
+  const reservedTimes = reservations
+    .filter((res) => res.date === dateString)
+    .map((res) => res.time);
+
+  return allTimes.filter((t) => !reservedTimes.includes(t));
+}
 
 function Main() {
+
+  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+
     return <main>
             {/* Hero Section */}
     <section aria-label="Hero Section">
@@ -79,7 +117,10 @@ function Main() {
       </div>
       </div>
     </section>
-
+<section>
+     <h1>Book a Table</h1>
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+</section>
     {/* Testimonials Section  */}
     <section aria-label="Testimonials Section" className="testimonials-section">
   <h2>Testimonials</h2>
