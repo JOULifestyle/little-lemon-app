@@ -117,10 +117,6 @@ function Main() {
       </div>
       </div>
     </section>
-<section>
-     <h1>Book a Table</h1>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
-</section>
     {/* Testimonials Section  */}
     <section aria-label="Testimonials Section" className="testimonials-section">
   <h2>Testimonials</h2>

@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import Header from '../component/Header';
+import Footer from '../component/Footer';
 
 function BookingTable() {
   const [bookings, setBookings] = useState([]);
@@ -11,6 +13,9 @@ function BookingTable() {
   if (bookings.length === 0) return <p>No bookings yet.</p>;
 
   return (
+    <>
+    <Header />
+    <section className="booking-table-section" aria-label="Booking Table Section">
     <table className="booking-table">
       <thead>
         <tr>
@@ -32,7 +37,10 @@ function BookingTable() {
         ))}
       </tbody>
     </table>
+    </section>
+    </>
   );
+
 }
 
 export default BookingTable;

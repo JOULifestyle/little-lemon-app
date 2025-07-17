@@ -1,10 +1,23 @@
 /* Base Styles */
-body {
+html, body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+  height: 100%;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Optional wrapper div inside App.js or BookingPage.js */
+.page-wrapper {
+  flex: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -616,6 +629,41 @@ textarea#note {
   background-color: #EDEFEE;
 }
 
+.booking-table-section {
+  padding-top: 150px; /* Adjust this based on your header height */
+  background-color: #fdfdfd; /* Optional: visual clarity */
+  padding-bottom: 150px;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.booking-table th {
+  background-color: #495E57;
+  color: white;
+}
+
+.booking-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.confirmation-section  {
+  padding-top: 150px; /* Adjust this based on your header height */
+  background-color: #fdfdfd; /* Optional: visual clarity */
+  padding-bottom: 150px;
+  
+}
 
 /* 🎯 Mobile Only Styles */
 @media (max-width: 768px) {
