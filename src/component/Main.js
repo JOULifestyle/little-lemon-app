@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useReducer } from 'react';
-import BookingForm from './BookingForm';
-import { fetchAPI, submitAPI } from '../api';
+import { fetchAPI } from '../api';
 
 
 
@@ -22,10 +20,10 @@ export const updateTimes = (state, action) => {
   return state;
 };
 
-// 🔁 Helper function
+//  Helper function
 function getFilteredTimes(dateString) {
-  const dateObj = new Date(dateString); // 👈 Convert string to Date object
-  const allTimes = fetchAPI(dateObj); // now fetchAPI gets a real Date
+  const dateObj = new Date(dateString); //  Convert string to Date object
+  const allTimes = fetchAPI(dateObj); //  fetchAPI gets a real Date
 
   const reservations = JSON.parse(localStorage.getItem("reservations") || "[]");
   const reservedTimes = reservations
@@ -37,33 +35,34 @@ function getFilteredTimes(dateString) {
 
 function Main() {
 
-  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
     return <main>
             {/* Hero Section */}
-    <section aria-label="Hero Section">
-    <div className="hero-left">
-      <h1>Little Lemon</h1>
-      <h2>Chicago</h2>
-      <p>We are family owned Mediterranean restaurant, focused on traditional recipes, served with a modern twist.</p>
-      <Link to="/booking">
+   <section className="hero-section" aria-label="Hero Section">
+  <div className="hero-text">
+    <h1>Little Lemon</h1>
+    <h2>Chicago</h2>
+    <p>We are family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+     <Link to="/booking">
   <button>Reserve a Table</button>
 </Link>
-    </div>
-     <div className="hero-right">
-      <img src="restauranfood.jpg" alt="Chef holding Mediterranean food" />
-    </div>
-    </section>
+  </div>
 
-    {/* Highlights Section */}
-    <section aria-label="Weekly Specials">
-      <div className="highlights-header">
-      <h2>This weeks Specials!</h2>
-      </div>
+  <div className="hero-image">
+    <img src="/restauranfood.jpg" alt="Hero" />
+  </div>
+</section>
+ {/* Highlights Section */}
+    <section aria-label="Weekly Specials" className="highlights-section">
+  <div className="container">
+    <div className="highlights-header">
+      <h2>This week's Specials!</h2>
       <div className="highlights-buttons">
-      <button>Online Menu</button>
+        <button>Online Menu</button>
       </div>
-        <div className="highlights-wrapper">
+    </div>
+
+    <div className="highlights-wrapper">
       <div className="highlights">
         <article>
           <img src="greek salad.jpg" alt="Greek Salad" />
@@ -116,6 +115,7 @@ function Main() {
         </article>
       </div>
       </div>
+    </div>
     </section>
     {/* Testimonials Section  */}
     <section aria-label="Testimonials Section" className="testimonials-section">
@@ -124,7 +124,7 @@ function Main() {
     <article className="testimonial">
       <div className="rating">⭐⭐⭐⭐⭐</div>
       <div className="user-info">
-        <img src="happy customer 1.webp" alt="Customer 1" />
+        <img src="/customer1.jpg" alt="Customer 1" />
         <h4>David</h4>
       </div>
       <p>"Absolutely loved the food and the service!"</p>
@@ -133,7 +133,7 @@ function Main() {
     <article className="testimonial">
       <div className="rating">⭐⭐⭐⭐</div>
       <div className="user-info">
-        <img src="happy customer 2.jpg" alt="Customer 2" />
+        <img src="/customer2.jpg" alt="Customer 2" />
         <h4>Sarah</h4>
       </div>
       <p>"Great ambience and authentic Mediterranean flavors."</p>
@@ -142,15 +142,14 @@ function Main() {
     <article className="testimonial">
       <div className="rating">⭐⭐⭐⭐⭐</div>
       <div className="user-info">
-        <img src="happy customer 3.jpg" alt="Customer 3" />
+        <img src="/customer3.jpg" alt="Customer 3" />
         <h4>Emily</h4>
       </div>
       <p>"A delightful experience. Would definitely return!"</p>
     </article>
   </div>
 </section>
-
-    {/* About Section */}
+ {/* About Section */}
     <section aria-label="About Section">
       <div className="about-text">
       <h1>Little Lemon</h1>
@@ -158,8 +157,8 @@ function Main() {
       <p>Serving fresh Mediterranean dishes with a modern twist.</p>
       </div>
       <div className="about-images">
-      <img src="Mario and Adrian A.jpg" alt="Photo of Adrian" className="img-back" />
-      <img src="Mario and Adrian b.jpg" alt="Photo of Mario" className="img-front" />
+      <img src="Mario and Adrian A.jpg" alt="Photo of Adrian" className="img-front" />
+      <img src="Mario and Adrian b.jpg" alt="Photo of Mario" className="img-back" />
       </div>
     </section>
     </main>

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      <section className="footer-col logo-col">
+      <section className="footer-col footer-logo-section">
         <img src="Little lemon darkmode.png" alt="Little Lemon Logo" className="footer-logo" />
       </section>
 
@@ -9,11 +9,11 @@ function Footer() {
         <h3>Doormat Navigation</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/reservations">Reservations</a></li>
-          <li><a href="/order">Order Online</a></li>
-          <li><a href="/login">Login</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="/booking-table">Reservations</a></li>
+          <li><a href="#">Order Online</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
       </section>
 
@@ -35,9 +35,8 @@ function Footer() {
         </ul>
       </section>
 
-      {/* 👇 Add this copyright line */}
       <div className="footer-copyright">
-        © {new Date().getFullYear()} Jou Lifestyle Inc.
+        © {new Date().getFullYear()} JOU Lifestyle Inc.
       </div>
     </footer>
   );
