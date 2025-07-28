@@ -13,6 +13,7 @@ function BookingTable() {
 
   return (
     <>
+    <div className="page-wrapper">
       <Header />
       <section className="booking-table-section" aria-label="Booking Table Section">
         {bookings.length === 0 ? (
@@ -33,7 +34,7 @@ function BookingTable() {
 
             {/* Table View for Desktop */}
             <div className="table-container">
-              <table className="booking-table">
+              <table className="booking-table desktop-view">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -62,7 +63,7 @@ function BookingTable() {
             </div>
 
             {/* Card View for Mobile */}
-            <div className="booking-list">
+            <div className="card-bookings mobile-view">
               {bookings.map((b, i) => (
                 <div className="booking-card" key={i}>
                   <p><strong>Name:</strong> {b.name}</p>
@@ -79,6 +80,7 @@ function BookingTable() {
         )}
       </section>
       <Footer />
+      </div>
     </>
   );
 }
