@@ -78,12 +78,29 @@ Start the development server:
 npm start
 Visit http://localhost:3000
 
+---
+
 🔗 Live Demo
 👉 View live on Vercel: https://little-lemon-app-zeta.vercel.app
 
-📷 Screenshots
+---
+
+## 🎨 UI/UX Design
+
+I designed both the **wireframe** and **interactive prototype** of this application using **Figma**, focusing on clean layout, usability, and responsiveness from mobile to desktop.
+
+📸 Wireframe & Prototype:
+<img src="Little Lemon Wireframe.png" alt="Wireframe and prototype preview" />
+
+---
+## 📷 App Screenshots
+### Mobile View
 <img src="phone-mockups-1.png" alt="Little lemon mobile app" />
+
+### Tablet/Desktop View
 <img src="Device-Mockups.png" alt="Little lemon app" />
+
+---
 
 📌 Project Status
 ✅ Completed core features
