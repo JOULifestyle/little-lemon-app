@@ -88,6 +88,8 @@ Visit http://localhost:3000
 ## 🎨 UI/UX Design
 
 I designed both the **wireframe** and **interactive prototype** of this application using **Figma**, focusing on clean layout, usability, and responsiveness from mobile to desktop.
+You can view the Persona, Journey Map, Wireframes, and Prototype here:  
+👉 [View UX Artifacts on Figma](https://www.figma.com/design/72IAWTpXEV0U4uFpLiRrCr/Little-Lemon-UX-Artifacts?node-id=57-135&t=VAdrQQLhQ4v2VVo1-1)
 
 📸 Wireframe & Prototype:
 <img src="Little Lemon Wireframe.png" alt="Wireframe and prototype preview" />
