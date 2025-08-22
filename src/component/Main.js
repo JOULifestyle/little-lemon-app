@@ -58,8 +58,11 @@ function Main() {
     <div className="highlights-header">
       <h2>This week's Specials!</h2>
       <div className="highlights-buttons">
-        <button>Online Menu</button>
-      </div>
+  <Link to="/menu">
+    <button>Online Menu</button>
+  </Link>
+</div>
+
     </div>
 
     <div className="highlights-wrapper">
@@ -71,10 +74,16 @@ function Main() {
   <span className="price">$12.99</span>
 </div>
           <p>The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-         <a href="#" className="order-link">
+        <a 
+  href="https://buy.stripe.com/test_8x27sL0tA8dUcoV1RsfEk02" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="order-link"
+>
   Order a delivery
   <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
+
 
         </article>
         <article>
@@ -84,10 +93,16 @@ function Main() {
   <span className="price">$10.99</span>
 </div>
           <p>Our Bruschetta is made from grilled bread, rubbed with garlic, then seasoned with salt and olive oil—simple, flavorful, and perfect as a light appetizer.</p>
-          <a href="#" className="order-link">
+          <a 
+  href="https://buy.stripe.com/test_8x27sL0tA8dUcoV1RsfEk02" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="order-link"
+>
   Order a delivery
   <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
+
         </article>
         <article>
           <img src="lemon dessert.jpg" alt="Lemon Dessert" />
@@ -96,22 +111,53 @@ function Main() {
   <span className="price">$8.99</span>
 </div>
           <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-         <a href="#" className="order-link">
+         <a 
+  href="https://buy.stripe.com/test_8x27sL0tA8dUcoV1RsfEk02" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="order-link"
+>
   Order a delivery
   <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
+
         </article>
         <article>
-          <img src="greek salad.jpg" alt="Greek Salad" />
+          <img src="Grilled-Fish.jpg" alt="Grilled Fish" />
           <div className="dish-header">
-  <h3>Greek Salad</h3>
-  <span className="price">$12.99</span>
+  <h3>Grilled Fish</h3>
+  <span className="price">$18.99</span>
 </div>
-          <p>The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-          <a href="#" className="order-link">
+          <p>Freshly grilled fish seasoned with herbs and spices, served with a squeeze of lemon and paired with a light side of roasted vegetables.</p>
+          <a 
+  href="https://buy.stripe.com/test_8x27sL0tA8dUcoV1RsfEk02" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="order-link"
+>
   Order a delivery
   <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
 </a>
+
+        </article>
+
+         <article>
+          <img src="Pasta-Carbonara-recetas.jpg" alt="Pasta Carbonara" />
+          <div className="dish-header">
+  <h3>Pasta Carbonara</h3>
+  <span className="price">$14.99</span>
+</div>
+          <p>Classic pasta carbonara tossed in a creamy parmesan sauce with smoky pancetta, topped with freshly ground black pepper and herbs.</p>
+          <a 
+  href="https://buy.stripe.com/test_8x27sL0tA8dUcoV1RsfEk02" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="order-link"
+>
+  Order a delivery
+  <span className="iconify delivery-icon" data-icon="ic:baseline-delivery-dining"></span>
+</a>
+
         </article>
       </div>
       </div>

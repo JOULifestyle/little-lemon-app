@@ -1,4 +1,4 @@
-import Header from '../component/Header';
+
 import Footer from '../component/Footer';
 import BookingForm from '../component/BookingForm'; 
 import MobileCarousel from '../component/MobileCarousel';
@@ -10,7 +10,6 @@ function BookingPage() {
 
   return (
     <>
-      <Header />
       <section class="booking-section">
   <div class="booking-container">
     <div class="left-content">

@@ -29,6 +29,7 @@ This is a responsive restaurant reservation web app built as a **capstone projec
 
 ### ✅ Confirmation Page
 - Displays success message after booking
+- Links to checkout page to make payment
 - Responsive design
 - Integrated Header & Footer for full app structure
 
@@ -49,18 +50,20 @@ This is a responsive restaurant reservation web app built as a **capstone projec
 - React Router for navigation
 
 ---
+```
 ## 📁 Folder Structure
 
 src/
 │
-├── component/ # Header, Footer, MainPage, BookingForm, MobileCarousel
-├── pages/ # HomePage, BookingPage, BookingTable, ConfirmationPage
+├── component/ # Header, Footer, Main, BookingForm, MobileCarousel, Login
+├── pages/ # About, HomePage, BookingPage, BookingTable, ConfirmationPage, MenuPage, OrderOnlinePage
 ├── public/ # Images and media
 ├── App.js
 ├── index.js
-└── api.js
+├── api.js
 └── App.css
 
+```
 ---
 
 ## Getting Started
@@ -88,6 +91,8 @@ Visit http://localhost:3000
 ## 🎨 UI/UX Design
 
 I designed both the **wireframe** and **interactive prototype** of this application using **Figma**, focusing on clean layout, usability, and responsiveness from mobile to desktop.
+You can view the Persona, Journey Map, Wireframes, and Prototype here:  
+👉 [View UX Artifacts on Figma](https://www.figma.com/design/72IAWTpXEV0U4uFpLiRrCr/Little-Lemon-UX-Artifacts?node-id=57-135&t=VAdrQQLhQ4v2VVo1-1)
 
 📸 Wireframe & Prototype:
 <img src="Little Lemon Wireframe.png" alt="Wireframe and prototype preview" />
@@ -102,15 +107,6 @@ I designed both the **wireframe** and **interactive prototype** of this applicat
 
 ---
 
-📌 Project Status
-✅ Completed core features
-⏳ Optional features not implemented:
-
--Login / Auth
-
--Online Delivery Ordering Page
-
--About Page
 
 📣 Attribution
 This project was completed as part of the Meta Front-End Developer Professional Certificate on Coursera.

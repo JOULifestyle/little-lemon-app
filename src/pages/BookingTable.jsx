@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Header from '../component/Header';
 import Footer from '../component/Footer';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +13,6 @@ function BookingTable() {
   return (
     <>
     <div className="page-wrapper">
-      <Header />
       <section className="booking-table-section" aria-label="Booking Table Section">
         {bookings.length === 0 ? (
           <div className="no-bookings-message">
