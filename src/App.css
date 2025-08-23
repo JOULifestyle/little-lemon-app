@@ -670,6 +670,12 @@ textarea#note {
   margin-top: 50px;
 }
 
+.table-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 /* Table View (Desktop default) */
 .table-container {
   display: none;

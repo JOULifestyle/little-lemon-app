@@ -6,19 +6,20 @@ import { fetchAPI } from '../api';
 // 1. Initialize available times using the API
 
 export const initializeTimes = () => {
-  const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
-  return getFilteredTimes(today);
+  const today = new Date(); // 👈 keep it a Date object
+  return fetchAPI(today);
 };
 
 
 // 2. Reducer to update times based on selected date
 
 export const updateTimes = (state, action) => {
-  if (action.type === 'update') {
-    return getFilteredTimes(action.date);
+  if (action.type === 'update' && action.date) {
+    return fetchAPI(new Date(action.date));
   }
   return state;
 };
+
 
 //  Helper function
 function getFilteredTimes(dateString) {

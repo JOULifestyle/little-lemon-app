@@ -1,8 +1,33 @@
 import { useEffect, useState } from 'react';
 import Footer from '../component/Footer';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function BookingTable() {
+  const handleCancel = (index) => {
+    const confirmCancel = window.confirm(
+      'Cancelation costs 50% of your commitment fee. Are you sure you want to cancel this reservation?'
+    );
+    if (!confirmCancel) return;
+
+  const updated = bookings.filter((_, i) => i !== index);
+  setBookings(updated);
+  localStorage.setItem("reservations", JSON.stringify(updated));
+};
+
+ const handleEdit = (index) => {
+    const confirmEdit = window.confirm(
+      'Please note that editing 30 minutes after booking is not valid. Do you want to proceed?'
+    );
+    if (!confirmEdit) return;
+
+    navigate('/booking', {
+      state: { bookingIndex: index, bookingData: bookings[index] },
+    });
+  };
+const navigate = useNavigate();
+
+
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
@@ -42,6 +67,7 @@ function BookingTable() {
                     <th>Guests</th>
                     <th>Occasion</th>
                     <th>Note</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -54,6 +80,13 @@ function BookingTable() {
                       <td>{b.guests}</td>
                       <td>{b.occasion}</td>
                       <td>{b.note}</td>
+                      <td>
+                        <div className="table-buttons">
+  <button onClick={() => handleEdit(i)}>Edit Booking</button>
+  <button onClick={() => handleCancel(i)}>Cancel Reservation</button>
+  </div>
+</td>
+
                     </tr>
                   ))}
                 </tbody>
@@ -71,6 +104,10 @@ function BookingTable() {
                   <p><strong>Guests:</strong> {b.guests}</p>
                   <p><strong>Occasion:</strong> {b.occasion}</p>
                   <p><strong>Note:</strong> {b.note}</p>
+                  <div className="table-buttons">
+                   <button onClick={() => handleEdit(i)}>Edit Booking</button>
+  <button onClick={() => handleCancel(i)}>Cancel Reservation</button>
+  </div>
                 </div>
               ))}
             </div>
