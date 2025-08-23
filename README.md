@@ -15,6 +15,7 @@ This is a responsive restaurant reservation web app built as a **capstone projec
 - **Interactive reservation form**
 - Prevents double booking by **disabling already reserved time slots** per day
 - Form validation
+- Users can edit and cancel previously made reservations directly from the bookings table. While editing, the booking form opens with all previously entered data pre-filled, including the selected date and time, so users don’t have to re-enter details. If the user chooses a different time, the updated time automatically becomes available in the list of times.
 - Responsive layout:
   - Desktop: text on left, large vertical image stack, and form on right
   - Mobile: stacked layout with **image slideshow**
@@ -55,7 +56,7 @@ This is a responsive restaurant reservation web app built as a **capstone projec
 
 src/
 │
-├── component/ # Header, Footer, Main, BookingForm, MobileCarousel, Login
+├── component/ # Header, Footer, Main,    BookingForm, MobileCarousel, Login
 ├── pages/ # About, HomePage, BookingPage, BookingTable, ConfirmationPage, MenuPage, OrderOnlinePage
 ├── public/ # Images and media
 ├── App.js
