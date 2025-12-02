@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   const dishes = [
     { name: "Greek Salad", price: "$12.99", img: "greek salad.jpg" },
-    { name: "Bruschetta", price: "$5.99", img: "bruchetta.svg" },
+    { name: "Bruschetta", price: "$5.99", img: "bruchetta.png" },
     { name: "Grilled Fish", price: "$18.99", img: "Grilled-Fish.jpg" },
     { name: "Pasta Carbonara", price: "$14.99", img: "Pasta-Carbonara-recetas.jpg" },
     { name: "Lemon Dessert", price: "$6.99", img: "lemon dessert.jpg" },

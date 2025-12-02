@@ -704,7 +704,7 @@ textarea#note {
   background-color: #f9f9f9;
 }
 
-/* Card View (Mobile/Tablet) — initially hidden */
+/* Card View (Mobile/Tablet) - initially hidden */
 .card-bookings {
   display: flex;
   flex-direction: column;
@@ -783,7 +783,7 @@ textarea#note {
   background-color: #ddb900;
 }
 
-/* 🎯 Mobile Only Styles */
+/*  Mobile Only Styles */
 @media (max-width: 768px) {
  @media (max-width: 768px) {
   .booking-container {
@@ -1080,14 +1080,14 @@ textarea#note {
 }
 
 
-/* 📱 Mobile (stack vertically) */
+/*  Mobile (stack vertically) */
 @media (max-width: 768px) {
   .menu-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* 📱 Small Mobile (single column) */
+/*  Small Mobile (single column) */
 @media (max-width: 480px) {
   .menu-grid {
     grid-template-columns: 1fr;

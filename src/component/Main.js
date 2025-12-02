@@ -6,7 +6,7 @@ import { fetchAPI } from '../api';
 // 1. Initialize available times using the API
 
 export const initializeTimes = () => {
-  const today = new Date(); // 👈 keep it a Date object
+  const today = new Date(); 
   return fetchAPI(today);
 };
 
@@ -21,7 +21,6 @@ export const updateTimes = (state, action) => {
 };
 
 
-//  Helper function
 function getFilteredTimes(dateString) {
   const dateObj = new Date(dateString); //  Convert string to Date object
   const allTimes = fetchAPI(dateObj); //  fetchAPI gets a real Date
@@ -36,8 +35,15 @@ function getFilteredTimes(dateString) {
 
 function Main() {
 
+     const logImageLoad = (imageName) => {
+       console.log(`${imageName} loaded at ${new Date().toISOString()}`);
+     };
 
-    return <main>
+     const logImageError = (imageName) => {
+       console.error(`${imageName} failed to load`);
+     };
+
+     return <main>
             {/* Hero Section */}
    <section className="hero-section" aria-label="Hero Section">
   <div className="hero-text">
@@ -50,7 +56,7 @@ function Main() {
   </div>
 
   <div className="hero-image">
-    <img src="/restauranfood.jpg" alt="Hero" />
+    <img src="/restauranfood.jpg" alt="Hero" onLoad={() => logImageLoad('Hero image')} onError={() => logImageError('Hero image')} />
   </div>
 </section>
  {/* Highlights Section */}
@@ -69,7 +75,7 @@ function Main() {
     <div className="highlights-wrapper">
       <div className="highlights">
         <article>
-          <img src="greek salad.jpg" alt="Greek Salad" />
+          <img src="greek salad.jpg" alt="Greek Salad" onLoad={() => logImageLoad('Greek Salad')} onError={() => logImageError('Greek Salad')} />
           <div className="dish-header">
   <h3>Greek Salad</h3>
   <span className="price">$12.99</span>
@@ -88,7 +94,7 @@ function Main() {
 
         </article>
         <article>
-          <img src="bruchetta.svg" alt="Bruschetta" />
+          <img src="bruchetta.png" alt="Bruschetta" />
           <div className="dish-header">
   <h3>Bruschetta</h3>
   <span className="price">$10.99</span>
@@ -204,8 +210,8 @@ function Main() {
       <p>Serving fresh Mediterranean dishes with a modern twist.</p>
       </div>
       <div className="about-images">
-      <img src="Mario and Adrian A.jpg" alt="Photo of Adrian" className="img-front" />
-      <img src="Mario and Adrian b.jpg" alt="Photo of Mario" className="img-back" />
+      <img src="Mario and Adrian A.jpg" alt="Photo of Adrian" className="img-front" onLoad={() => logImageLoad('Mario Adrian A')} onError={() => logImageError('Mario Adrian A')} />
+      <img src="Mario and Adrian b.jpg" alt="Photo of Mario" className="img-back" onLoad={() => logImageLoad('Mario Adrian B')} onError={() => logImageError('Mario Adrian B')} />
       </div>
     </section>
     </main>

@@ -29,7 +29,7 @@ const [isMobile, setIsMobile] = useState(false);
     return () => clearInterval(interval);
   }, [isMobile]);
 
-  if (!isMobile) return null; // ❌ Don't render at all on desktop
+  if (!isMobile) return null; 
 
   return (
     <div className="mobile-carousel">

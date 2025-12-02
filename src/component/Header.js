@@ -7,7 +7,7 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    navigate("/"); // redirect back to home after logout
+    navigate("/");
   };
 
   return (

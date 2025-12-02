@@ -4,7 +4,7 @@ import Footer from "../component/Footer";
 
 const menuItems = [
   { id: 1, name: "Greek Salad", price: 12.99, image: "greek salad.jpg" },
-  { id: 2, name: "Bruschetta", price: 5.99, image: "bruchetta.svg" },
+  { id: 2, name: "Bruschetta", price: 5.99, image: "bruchetta.png" },
   { id: 3, name: "Lemon Dessert", price: 6.99, image: "lemon dessert.jpg" },
   { id: 4, name: "Grilled Fish", price: 18.99, image: "Grilled-Fish.jpg" },
   { id: 5, name: "Pasta Carbonara", price: 14.99, image: "Pasta-Carbonara-recetas.jpg" },

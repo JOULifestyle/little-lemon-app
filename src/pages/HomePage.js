@@ -1,4 +1,3 @@
-
 import Footer from '../component/Footer';
 import React from 'react';
 import Main from '../component/Main';

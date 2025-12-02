@@ -1,4 +1,4 @@
-// src/component/BookingForm.js
+
 import { useEffect, useMemo, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { submitAPI } from '../api';
@@ -79,11 +79,11 @@ function BookingForm({ availableTimes = [], dispatch }) {
     if (bookingIndex !== undefined) {
       prev[bookingIndex] = formData; // update existing
       localStorage.setItem('reservations', JSON.stringify(prev));
-      navigate('/booking-table'); // back to table after editing
+      navigate('/booking-table');
     } else {
-      prev.push(formData); // new booking
+      prev.push(formData); 
       localStorage.setItem('reservations', JSON.stringify(prev));
-      navigate('/confirmation'); // go to confirmation
+      navigate('/confirmation');
     }
   };
 
