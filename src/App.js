@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import HomePage from './pages/Homepage';
+import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
 import Confirmation from './pages/Confirmation';
 import BookingTable from './pages/BookingTable';
